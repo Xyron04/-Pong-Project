@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\IEE256_H526\Pong ver final\Pong.uvproj
+Project File Date:  11/26/2021
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=6484 RO-data=9944 RW-data=24 ZI-data=1528  
+".\Pong.axf" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>
+king...
+Program Size: Code=6484 RO-data=9944 RW-data=24 ZI-data=1528  
+".\Pong.axf" - 0 Error(s), 1 Warning(s).
+       while((GPIO_PORTF_DATA_R & 0x11) == 0x10);
+main.c(337): error:  #118: a void function may not return a value
+                        return 1;
+main.c(339): error:  #169: expected a declaration
+                if((GPIO_PORTF_DATA_R & 0x11)==0x01){                                                                   //Si se presiona SW1, se regresa al menú principal
+main.c(375): warning:  #12-D: parsing restarts here after previous syntax error
+                                        drawFilledRectangle(barra1_x1, barra1_y1, barra1_x2, barra1_y2);//Se dibuja la barra 1
+main.c(376): error:  #77-D: this declaration has no storage class or type specifier
+                                        contador_barra1 = 0;
+main.c(376): error:  #147: declaration is incompatible with "uint16_t contador_barra1" (declared at line 7)
+                                        contador_barra1 = 0;
+main.c(377): error:  #169: expected a declaration
+                                }
+main.c(429): warning:  #12-D: parsing restarts here after previous syntax error
+                                        contador_bola_barra2 = 0;
+main.c(431): error:  #169: expected a declaration
+                                        if(nueva_partida == 1){//Se reinicia el juego
+main.c(446): warning:  #12-D: parsing restarts here after previous syntax error
+                                copyToScreen();//Se pinta en la pantalla
+main.c(447): error:  #77-D: this declaration has no storage class or type specifier
+                                contador_general = 0;//Se reinicia el contador
+main.c(447): error:  #147: declaration is incompatible with "uint16_t contador_general" (declared at line 7)
+                                contador_general = 0;//Se reinicia el contador
+main.c(448): error:  #169: expected a declaration
+                        }       
+main.c(452): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+main.c: 5 warnings, 10 errors
+".\Pong.axf" - 10 Error(s), 5 Warning(s).
+Target not created

@@ -1,0 +1,803 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.Movimiento_IA) refers to main.o(.data) for barra1_y1
+    main.o(i.Movimiento_J1) refers to main.o(.data) for barra1_y1
+    main.o(i.Movimiento_J2) refers to biblioteca_teclado.o(i.rxcar_uart0) for rxcar_uart0
+    main.o(i.Movimiento_J2) refers to main.o(.data) for control
+    main.o(i.actualizarContador) refers to main.o(.data) for contador_bola_barra2
+    main.o(i.conmutar_leds) refers to main.o(i.prender_led) for prender_led
+    main.o(i.evaluar_colision_x) refers to main.o(.data) for ball_x1
+    main.o(i.evaluar_colision_y) refers to main.o(.data) for ball_y1
+    main.o(i.fin_partida) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    main.o(i.fin_partida) refers to nokia5110.o(i.gana_cpu) for gana_cpu
+    main.o(i.fin_partida) refers to nokia5110.o(i.gana_jugador) for gana_jugador
+    main.o(i.fin_partida) refers to nokia5110.o(i.ganador_j1) for ganador_j1
+    main.o(i.fin_partida) refers to nokia5110.o(i.ganador_j2) for ganador_j2
+    main.o(i.fin_partida) refers to main.o(i.conmutar_leds) for conmutar_leds
+    main.o(i.fin_partida) refers to biblioteca_teclado.o(i.rxcar_uart0) for rxcar_uart0
+    main.o(i.fin_partida) refers to main.o(.data) for contador_general
+    main.o(i.inicio_de_juego) refers to main.o(.data) for barra1_x1
+    main.o(i.main) refers to biblioteca_teclado.o(i.config_uart0) for config_uart0
+    main.o(i.main) refers to nokia5110.o(i.Nokia5110_Init) for Nokia5110_Init
+    main.o(i.main) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    main.o(i.main) refers to main.o(i.ConfiguraTimer_1ms) for ConfiguraTimer_1ms
+    main.o(i.main) refers to biblioteca_pulsadores.o(i.config_pulsadores) for config_pulsadores
+    main.o(i.main) refers to main.o(i.menus) for menus
+    main.o(i.main) refers to main.o(i.inicio_de_juego) for inicio_de_juego
+    main.o(i.main) refers to main.o(i.actualizarContador) for actualizarContador
+    main.o(i.main) refers to nokia5110.o(i.clearFilledRectangle) for clearFilledRectangle
+    main.o(i.main) refers to main.o(i.Movimiento_IA) for Movimiento_IA
+    main.o(i.main) refers to main.o(i.Movimiento_J1) for Movimiento_J1
+    main.o(i.main) refers to nokia5110.o(i.drawFilledRectangle) for drawFilledRectangle
+    main.o(i.main) refers to main.o(i.Movimiento_J2) for Movimiento_J2
+    main.o(i.main) refers to main.o(i.evaluar_colision_x) for evaluar_colision_x
+    main.o(i.main) refers to main.o(i.evaluar_colision_y) for evaluar_colision_y
+    main.o(i.main) refers to main.o(i.prender_led) for prender_led
+    main.o(i.main) refers to nokia5110.o(i.clearBuffer) for clearBuffer
+    main.o(i.main) refers to main.o(i.fin_partida) for fin_partida
+    main.o(i.main) refers to main.o(i.score) for score
+    main.o(i.main) refers to nokia5110.o(i.copyToScreen) for copyToScreen
+    main.o(i.main) refers to main.o(i.pausar) for pausar
+    main.o(i.main) refers to main.o(.data) for contador_general
+    main.o(i.menus) refers to nokia5110.o(i.menu_inicio) for menu_inicio
+    main.o(i.menus) refers to nokia5110.o(i.menu_modo) for menu_modo
+    main.o(i.menus) refers to biblioteca_pulsadores.o(i.evaluar_pulsadores_menu) for evaluar_pulsadores_menu
+    main.o(i.menus) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    main.o(i.menus) refers to nokia5110.o(i.menu_control) for menu_control
+    main.o(i.menus) refers to nokia5110.o(i.menu_dificultad) for menu_dificultad
+    main.o(i.menus) refers to main.o(.data) for modo
+    main.o(i.score) refers to nokia5110.o(i.clearFilledRectangle) for clearFilledRectangle
+    main.o(i.score) refers to nokia5110.o(i.text) for text
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    nokia5110.o(i.Nokia5110_Clear) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_Clear) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    nokia5110.o(i.Nokia5110_ClearBuffer) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.Nokia5110_DisplayBuffer) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.Nokia5110_DisplayBuffer) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.Nokia5110_DrawFullImage) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    nokia5110.o(i.Nokia5110_DrawFullImage) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_Init) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_OutChar) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_OutChar) refers to nokia5110.o(.constdata) for ASCII
+    nokia5110.o(i.Nokia5110_OutChar2) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_OutChar2) refers to nokia5110.o(.constdata) for ASCII
+    nokia5110.o(i.Nokia5110_OutString) refers to nokia5110.o(i.Nokia5110_OutChar) for Nokia5110_OutChar
+    nokia5110.o(i.Nokia5110_OutUDec) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    nokia5110.o(i.Nokia5110_OutUDec) refers to nokia5110.o(i.Nokia5110_OutChar) for Nokia5110_OutChar
+    nokia5110.o(i.Nokia5110_PrintBMP) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.Nokia5110_SetCursor) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_SetCursorChar) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.Nokia5110_SetCursorChar) refers to nokia5110.o(i.Nokia5110_OutChar) for Nokia5110_OutChar
+    nokia5110.o(i.Nokia5110_SetCursorChar) refers to nokia5110.o(i.Nokia5110_OutChar2) for Nokia5110_OutChar2
+    nokia5110.o(i.background) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.background) refers to nokia5110.o(.data) for background_pong
+    nokia5110.o(i.barra_mov) refers to nokia5110.o(i.fillBuffer) for fillBuffer
+    nokia5110.o(i.barra_mov) refers to nokia5110.o(i.drawBitmap) for drawBitmap
+    nokia5110.o(i.barra_mov) refers to nokia5110.o(i.copyToScreen) for copyToScreen
+    nokia5110.o(i.clearBitmap) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.clearBuffer) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.clearCircle) refers to nokia5110.o(i.clearCirclePoints) for clearCirclePoints
+    nokia5110.o(i.clearCircleLines) refers to nokia5110.o(i.clearLine) for clearLine
+    nokia5110.o(i.clearCirclePoints) refers to nokia5110.o(i.clearPixel) for clearPixel
+    nokia5110.o(i.clearEllipse) refers to nokia5110.o(i.ellipseClearPoints) for ellipseClearPoints
+    nokia5110.o(i.clearEllipse) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.clearEllipse) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.clearEllipse) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.clearEllipse) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.clearFilledCircle) refers to nokia5110.o(i.clearCircleLines) for clearCircleLines
+    nokia5110.o(i.clearFilledEllipse) refers to nokia5110.o(i.ellipseClearLines) for ellipseClearLines
+    nokia5110.o(i.clearFilledEllipse) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.clearFilledEllipse) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.clearFilledEllipse) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.clearFilledEllipse) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.clearFilledRectangle) refers to nokia5110.o(i.clearHLine) for clearHLine
+    nokia5110.o(i.clearFilledRoundRectangle) refers to nokia5110.o(i.clearHLine) for clearHLine
+    nokia5110.o(i.clearFilledRoundRectangle) refers to nokia5110.o(i.clearVLine) for clearVLine
+    nokia5110.o(i.clearHLine) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.clearLine) refers to nokia5110.o(i.clearHLine) for clearHLine
+    nokia5110.o(i.clearLine) refers to nokia5110.o(i.clearVLine) for clearVLine
+    nokia5110.o(i.clearLine) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.clearLine) refers to ddiv.o(.text) for __aeabi_ddiv
+    nokia5110.o(i.clearLine) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.clearLine) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.clearLine) refers to nokia5110.o(i.clearPixel) for clearPixel
+    nokia5110.o(i.clearLine) refers to fflti.o(.text) for __aeabi_i2f
+    nokia5110.o(i.clearLine) refers to fdiv.o(.text) for __aeabi_fdiv
+    nokia5110.o(i.clearLine) refers to f2d.o(.text) for __aeabi_f2d
+    nokia5110.o(i.clearPixel) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.clearRealCircle) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.clearRealCircle) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.clearRealCircle) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.clearRealCircle) refers to nokia5110.o(i.clearEllipse) for clearEllipse
+    nokia5110.o(i.clearRealFilledCircle) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.clearRealFilledCircle) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.clearRealFilledCircle) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.clearRealFilledCircle) refers to nokia5110.o(i.clearFilledEllipse) for clearFilledEllipse
+    nokia5110.o(i.clearRectangle) refers to nokia5110.o(i.clearHLine) for clearHLine
+    nokia5110.o(i.clearRectangle) refers to nokia5110.o(i.clearVLine) for clearVLine
+    nokia5110.o(i.clearRoundRectangle) refers to nokia5110.o(i.clearPixel) for clearPixel
+    nokia5110.o(i.clearRoundRectangle) refers to nokia5110.o(i.clearHLine) for clearHLine
+    nokia5110.o(i.clearRoundRectangle) refers to nokia5110.o(i.clearVLine) for clearVLine
+    nokia5110.o(i.clearVLine) refers to nokia5110.o(i.clearPixel) for clearPixel
+    nokia5110.o(i.copyToScreen) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.copyToScreen) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.drawBitmap) refers to nokia5110.o(i.drawByte) for drawByte
+    nokia5110.o(i.drawByte) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.drawCircle) refers to nokia5110.o(i.drawCirclePoints) for drawCirclePoints
+    nokia5110.o(i.drawCircleLines) refers to nokia5110.o(i.drawLine) for drawLine
+    nokia5110.o(i.drawCirclePoints) refers to nokia5110.o(i.setPixel) for setPixel
+    nokia5110.o(i.drawEllipse) refers to nokia5110.o(i.ellipsePlotPoints) for ellipsePlotPoints
+    nokia5110.o(i.drawEllipse) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.drawEllipse) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.drawEllipse) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.drawEllipse) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.drawFilledCircle) refers to nokia5110.o(i.drawCircleLines) for drawCircleLines
+    nokia5110.o(i.drawFilledEllipse) refers to nokia5110.o(i.ellipsePlotLines) for ellipsePlotLines
+    nokia5110.o(i.drawFilledEllipse) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.drawFilledEllipse) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.drawFilledEllipse) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.drawFilledEllipse) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.drawFilledRectangle) refers to nokia5110.o(i.drawHLine) for drawHLine
+    nokia5110.o(i.drawFilledRoundRectangle) refers to nokia5110.o(i.drawHLine) for drawHLine
+    nokia5110.o(i.drawFilledRoundRectangle) refers to nokia5110.o(i.drawVLine) for drawVLine
+    nokia5110.o(i.drawHLine) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.drawLine) refers to nokia5110.o(i.drawHLine) for drawHLine
+    nokia5110.o(i.drawLine) refers to nokia5110.o(i.drawVLine) for drawVLine
+    nokia5110.o(i.drawLine) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.drawLine) refers to ddiv.o(.text) for __aeabi_ddiv
+    nokia5110.o(i.drawLine) refers to dadd.o(.text) for __aeabi_dadd
+    nokia5110.o(i.drawLine) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.drawLine) refers to nokia5110.o(i.setPixel) for setPixel
+    nokia5110.o(i.drawLine) refers to fflti.o(.text) for __aeabi_i2f
+    nokia5110.o(i.drawLine) refers to fdiv.o(.text) for __aeabi_fdiv
+    nokia5110.o(i.drawLine) refers to f2d.o(.text) for __aeabi_f2d
+    nokia5110.o(i.drawRealCircle) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.drawRealCircle) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.drawRealCircle) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.drawRealCircle) refers to nokia5110.o(i.drawEllipse) for drawEllipse
+    nokia5110.o(i.drawRealFilledCircle) refers to dflti.o(.text) for __aeabi_i2d
+    nokia5110.o(i.drawRealFilledCircle) refers to dmul.o(.text) for __aeabi_dmul
+    nokia5110.o(i.drawRealFilledCircle) refers to dfixi.o(.text) for __aeabi_d2iz
+    nokia5110.o(i.drawRealFilledCircle) refers to nokia5110.o(i.drawFilledEllipse) for drawFilledEllipse
+    nokia5110.o(i.drawRectangle) refers to nokia5110.o(i.drawHLine) for drawHLine
+    nokia5110.o(i.drawRectangle) refers to nokia5110.o(i.drawVLine) for drawVLine
+    nokia5110.o(i.drawRoundRectangle) refers to nokia5110.o(i.setPixel) for setPixel
+    nokia5110.o(i.drawRoundRectangle) refers to nokia5110.o(i.drawHLine) for drawHLine
+    nokia5110.o(i.drawRoundRectangle) refers to nokia5110.o(i.drawVLine) for drawVLine
+    nokia5110.o(i.drawVLine) refers to nokia5110.o(i.setPixel) for setPixel
+    nokia5110.o(i.ellipseClearLines) refers to nokia5110.o(i.clearLine) for clearLine
+    nokia5110.o(i.ellipseClearPoints) refers to nokia5110.o(i.clearPixel) for clearPixel
+    nokia5110.o(i.ellipsePlotLines) refers to nokia5110.o(i.drawLine) for drawLine
+    nokia5110.o(i.ellipsePlotPoints) refers to nokia5110.o(i.setPixel) for setPixel
+    nokia5110.o(i.fillBuffer) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.gana_cpu) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.gana_cpu) refers to nokia5110.o(.constdata) for perdiste_cpu
+    nokia5110.o(i.gana_jugador) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.gana_jugador) refers to nokia5110.o(.constdata) for ganaste_cpu
+    nokia5110.o(i.ganador_j1) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.ganador_j1) refers to nokia5110.o(.constdata) for gana_j1
+    nokia5110.o(i.ganador_j2) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.ganador_j2) refers to nokia5110.o(.constdata) for gana_j2
+    nokia5110.o(i.invertPixel) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.menu_control) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.menu_control) refers to nokia5110.o(.constdata) for control_1
+    nokia5110.o(i.menu_dificultad) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.menu_dificultad) refers to nokia5110.o(.constdata) for dificultad_facil
+    nokia5110.o(i.menu_inicio) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.menu_inicio) refers to nokia5110.o(.constdata) for inicio
+    nokia5110.o(i.menu_modo) refers to nokia5110.o(i.Nokia5110_DrawFullImage) for Nokia5110_DrawFullImage
+    nokia5110.o(i.menu_modo) refers to nokia5110.o(.constdata) for modo_de_juego_1
+    nokia5110.o(i.readPixel) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.setContrast) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    nokia5110.o(i.setPixel) refers to nokia5110.o(.bss) for Screen
+    nokia5110.o(i.text) refers to strlen.o(.text) for strlen
+    nokia5110.o(i.text) refers to nokia5110.o(.constdata) for Terminal3x5
+    nokia5110.o(i.text) refers to nokia5110.o(.bss) for Screen
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fdiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fdiv.o(.text) refers to fepilogue.o(.text) for _float_round
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.constdata), (480 bytes).
+    Removing startup.o(HEAP), (0 bytes).
+    Removing startup.o(.text), (28 bytes).
+    Removing nokia5110.o(i.Nokia5110_ClearBuffer), (24 bytes).
+    Removing nokia5110.o(i.Nokia5110_DisplayBuffer), (16 bytes).
+    Removing nokia5110.o(i.Nokia5110_OutChar), (64 bytes).
+    Removing nokia5110.o(i.Nokia5110_OutChar2), (88 bytes).
+    Removing nokia5110.o(i.Nokia5110_OutString), (22 bytes).
+    Removing nokia5110.o(i.Nokia5110_OutUDec), (412 bytes).
+    Removing nokia5110.o(i.Nokia5110_PrintBMP), (424 bytes).
+    Removing nokia5110.o(i.Nokia5110_SetCursorChar), (104 bytes).
+    Removing nokia5110.o(i.background), (16 bytes).
+    Removing nokia5110.o(i.barra_mov), (140 bytes).
+    Removing nokia5110.o(i.clearBitmap), (272 bytes).
+    Removing nokia5110.o(i.clearCircle), (86 bytes).
+    Removing nokia5110.o(i.clearCircleLines), (114 bytes).
+    Removing nokia5110.o(i.clearCirclePoints), (154 bytes).
+    Removing nokia5110.o(i.clearEllipse), (392 bytes).
+    Removing nokia5110.o(i.clearFilledCircle), (86 bytes).
+    Removing nokia5110.o(i.clearFilledEllipse), (392 bytes).
+    Removing nokia5110.o(i.clearFilledRoundRectangle), (128 bytes).
+    Removing nokia5110.o(i.clearLine), (476 bytes).
+    Removing nokia5110.o(i.clearPixel), (72 bytes).
+    Removing nokia5110.o(i.clearRealCircle), (60 bytes).
+    Removing nokia5110.o(i.clearRealFilledCircle), (60 bytes).
+    Removing nokia5110.o(i.clearRectangle), (78 bytes).
+    Removing nokia5110.o(i.clearRoundRectangle), (128 bytes).
+    Removing nokia5110.o(i.clearVLine), (44 bytes).
+    Removing nokia5110.o(i.drawBitmap), (72 bytes).
+    Removing nokia5110.o(i.drawByte), (156 bytes).
+    Removing nokia5110.o(i.drawCircle), (86 bytes).
+    Removing nokia5110.o(i.drawCircleLines), (114 bytes).
+    Removing nokia5110.o(i.drawCirclePoints), (154 bytes).
+    Removing nokia5110.o(i.drawEllipse), (392 bytes).
+    Removing nokia5110.o(i.drawFilledCircle), (86 bytes).
+    Removing nokia5110.o(i.drawFilledEllipse), (392 bytes).
+    Removing nokia5110.o(i.drawFilledRoundRectangle), (128 bytes).
+    Removing nokia5110.o(i.drawLine), (480 bytes).
+    Removing nokia5110.o(i.drawRealCircle), (60 bytes).
+    Removing nokia5110.o(i.drawRealFilledCircle), (60 bytes).
+    Removing nokia5110.o(i.drawRectangle), (78 bytes).
+    Removing nokia5110.o(i.drawRoundRectangle), (128 bytes).
+    Removing nokia5110.o(i.drawVLine), (44 bytes).
+    Removing nokia5110.o(i.ellipseClearLines), (40 bytes).
+    Removing nokia5110.o(i.ellipseClearPoints), (44 bytes).
+    Removing nokia5110.o(i.ellipsePlotLines), (40 bytes).
+    Removing nokia5110.o(i.ellipsePlotPoints), (44 bytes).
+    Removing nokia5110.o(i.fillBuffer), (28 bytes).
+    Removing nokia5110.o(i.invertPixel), (104 bytes).
+    Removing nokia5110.o(i.readADC), (52 bytes).
+    Removing nokia5110.o(i.readPixel), (80 bytes).
+    Removing nokia5110.o(i.setContrast), (40 bytes).
+    Removing nokia5110.o(i.setPixel), (72 bytes).
+    Removing nokia5110.o(.data), (504 bytes).
+    Removing fdiv.o(.text), (128 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing fflti.o(.text), (18 bytes).
+    Removing dflti.o(.text), (34 bytes).
+    Removing dfixi.o(.text), (62 bytes).
+    Removing f2d.o(.text), (38 bytes).
+    Removing fepilogue.o(.text), (108 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+
+64 unused section(s) (total 9200 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    Biblioteca_pulsadores.c                  0x00000000   Number         0  biblioteca_pulsadores.o ABSOLUTE
+    Biblioteca_teclado.c                     0x00000000   Number         0  biblioteca_teclado.o ABSOLUTE
+    Nokia5110.c                              0x00000000   Number         0  nokia5110.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x00000284   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000284   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000288   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000028c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000028c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000028c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000294   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000294   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000294   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000294   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000298   Section        0  strlen.o(.text)
+    .text                                    0x000002a8   Section       36  init.o(.text)
+    i.ConfiguraTimer_1ms                     0x000002cc   Section        0  main.o(i.ConfiguraTimer_1ms)
+    i.Movimiento_IA                          0x00000308   Section        0  main.o(i.Movimiento_IA)
+    i.Movimiento_J1                          0x000003b8   Section        0  main.o(i.Movimiento_J1)
+    i.Movimiento_J2                          0x00000418   Section        0  main.o(i.Movimiento_J2)
+    i.Nokia5110_Clear                        0x000004d0   Section        0  nokia5110.o(i.Nokia5110_Clear)
+    i.Nokia5110_DrawFullImage                0x000004f0   Section        0  nokia5110.o(i.Nokia5110_DrawFullImage)
+    i.Nokia5110_Init                         0x00000514   Section        0  nokia5110.o(i.Nokia5110_Init)
+    i.Nokia5110_SetCursor                    0x00000680   Section        0  nokia5110.o(i.Nokia5110_SetCursor)
+    i.__scatterload_copy                     0x000006b0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000006be   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000006c0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.actualizarContador                     0x000006d0   Section        0  main.o(i.actualizarContador)
+    i.clearBuffer                            0x00000708   Section        0  nokia5110.o(i.clearBuffer)
+    i.clearFilledRectangle                   0x00000720   Section        0  nokia5110.o(i.clearFilledRectangle)
+    i.clearHLine                             0x0000075c   Section        0  nokia5110.o(i.clearHLine)
+    i.config_pulsadores                      0x000007bc   Section        0  biblioteca_pulsadores.o(i.config_pulsadores)
+    i.config_uart0                           0x00000920   Section        0  biblioteca_teclado.o(i.config_uart0)
+    i.conmutar_leds                          0x000009dc   Section        0  main.o(i.conmutar_leds)
+    i.copyToScreen                           0x000009fc   Section        0  nokia5110.o(i.copyToScreen)
+    i.drawFilledRectangle                    0x00000a1c   Section        0  nokia5110.o(i.drawFilledRectangle)
+    i.drawHLine                              0x00000a58   Section        0  nokia5110.o(i.drawHLine)
+    i.evaluar_colision_x                     0x00000ab8   Section        0  main.o(i.evaluar_colision_x)
+    i.evaluar_colision_y                     0x00000b34   Section        0  main.o(i.evaluar_colision_y)
+    i.evaluar_pulsadores_menu                0x00000b54   Section        0  biblioteca_pulsadores.o(i.evaluar_pulsadores_menu)
+    i.fin_partida                            0x00000bd0   Section        0  main.o(i.fin_partida)
+    i.gana_cpu                               0x00000c7c   Section        0  nokia5110.o(i.gana_cpu)
+    i.gana_jugador                           0x00000c8c   Section        0  nokia5110.o(i.gana_jugador)
+    i.ganador_j1                             0x00000c9c   Section        0  nokia5110.o(i.ganador_j1)
+    i.ganador_j2                             0x00000cac   Section        0  nokia5110.o(i.ganador_j2)
+    i.inicio_de_juego                        0x00000cbc   Section        0  main.o(i.inicio_de_juego)
+    i.lcdwrite                               0x00000dac   Section        0  nokia5110.o(i.lcdwrite)
+    lcdwrite                                 0x00000dad   Thumb Code    66  nokia5110.o(i.lcdwrite)
+    i.main                                   0x00000df8   Section        0  main.o(i.main)
+    i.menu_control                           0x00001048   Section        0  nokia5110.o(i.menu_control)
+    i.menu_dificultad                        0x00001068   Section        0  nokia5110.o(i.menu_dificultad)
+    i.menu_inicio                            0x00001098   Section        0  nokia5110.o(i.menu_inicio)
+    i.menu_modo                              0x000010a8   Section        0  nokia5110.o(i.menu_modo)
+    i.menus                                  0x000010c8   Section        0  main.o(i.menus)
+    i.pausar                                 0x0000124c   Section        0  main.o(i.pausar)
+    i.prender_led                            0x00001274   Section        0  main.o(i.prender_led)
+    i.rxcar_uart0                            0x000012d0   Section        0  biblioteca_teclado.o(i.rxcar_uart0)
+    i.score                                  0x000012e8   Section        0  main.o(i.score)
+    i.text                                   0x00001330   Section        0  nokia5110.o(i.text)
+    .constdata                               0x00001954   Section     9912  nokia5110.o(.constdata)
+    ASCII                                    0x00001954   Data         480  nokia5110.o(.constdata)
+    Terminal3x5                              0x00001b34   Data         288  nokia5110.o(.constdata)
+    Terminal6x8                              0x00001c54   Data         480  nokia5110.o(.constdata)
+    Terminal11x16                            0x00001e34   Data        2112  nokia5110.o(.constdata)
+    .data                                    0x20000000   Section       24  main.o(.data)
+    .bss                                     0x20000018   Section      504  nokia5110.o(.bss)
+    STACK                                    0x20000210   Section     1024  startup.o(STACK)
+    StackMem                                 0x20000210   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    SysTick_Handler                          0x00000281   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortA_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortF_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000285   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000028d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000028d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000028d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000295   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000295   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    strlen                                   0x00000299   Thumb Code    14  strlen.o(.text)
+    __scatterload                            0x000002a9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002a9   Thumb Code     0  init.o(.text)
+    ConfiguraTimer_1ms                       0x000002cd   Thumb Code    58  main.o(i.ConfiguraTimer_1ms)
+    Movimiento_IA                            0x00000309   Thumb Code   162  main.o(i.Movimiento_IA)
+    Movimiento_J1                            0x000003b9   Thumb Code    82  main.o(i.Movimiento_J1)
+    Movimiento_J2                            0x00000419   Thumb Code   168  main.o(i.Movimiento_J2)
+    Nokia5110_Clear                          0x000004d1   Thumb Code    32  nokia5110.o(i.Nokia5110_Clear)
+    Nokia5110_DrawFullImage                  0x000004f1   Thumb Code    34  nokia5110.o(i.Nokia5110_DrawFullImage)
+    Nokia5110_Init                           0x00000515   Thumb Code   316  nokia5110.o(i.Nokia5110_Init)
+    Nokia5110_SetCursor                      0x00000681   Thumb Code    48  nokia5110.o(i.Nokia5110_SetCursor)
+    __scatterload_copy                       0x000006b1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000006bf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000006c1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    actualizarContador                       0x000006d1   Thumb Code    44  main.o(i.actualizarContador)
+    clearBuffer                              0x00000709   Thumb Code    20  nokia5110.o(i.clearBuffer)
+    clearFilledRectangle                     0x00000721   Thumb Code    60  nokia5110.o(i.clearFilledRectangle)
+    clearHLine                               0x0000075d   Thumb Code    90  nokia5110.o(i.clearHLine)
+    config_pulsadores                        0x000007bd   Thumb Code   310  biblioteca_pulsadores.o(i.config_pulsadores)
+    config_uart0                             0x00000921   Thumb Code   158  biblioteca_teclado.o(i.config_uart0)
+    conmutar_leds                            0x000009dd   Thumb Code    30  main.o(i.conmutar_leds)
+    copyToScreen                             0x000009fd   Thumb Code    26  nokia5110.o(i.copyToScreen)
+    drawFilledRectangle                      0x00000a1d   Thumb Code    60  nokia5110.o(i.drawFilledRectangle)
+    drawHLine                                0x00000a59   Thumb Code    90  nokia5110.o(i.drawHLine)
+    evaluar_colision_x                       0x00000ab9   Thumb Code    94  main.o(i.evaluar_colision_x)
+    evaluar_colision_y                       0x00000b35   Thumb Code    24  main.o(i.evaluar_colision_y)
+    evaluar_pulsadores_menu                  0x00000b55   Thumb Code   120  biblioteca_pulsadores.o(i.evaluar_pulsadores_menu)
+    fin_partida                              0x00000bd1   Thumb Code   156  main.o(i.fin_partida)
+    gana_cpu                                 0x00000c7d   Thumb Code    10  nokia5110.o(i.gana_cpu)
+    gana_jugador                             0x00000c8d   Thumb Code    10  nokia5110.o(i.gana_jugador)
+    ganador_j1                               0x00000c9d   Thumb Code    10  nokia5110.o(i.ganador_j1)
+    ganador_j2                               0x00000cad   Thumb Code    10  nokia5110.o(i.ganador_j2)
+    inicio_de_juego                          0x00000cbd   Thumb Code   176  main.o(i.inicio_de_juego)
+    main                                     0x00000df9   Thumb Code   518  main.o(i.main)
+    menu_control                             0x00001049   Thumb Code    22  nokia5110.o(i.menu_control)
+    menu_dificultad                          0x00001069   Thumb Code    36  nokia5110.o(i.menu_dificultad)
+    menu_inicio                              0x00001099   Thumb Code    10  nokia5110.o(i.menu_inicio)
+    menu_modo                                0x000010a9   Thumb Code    22  nokia5110.o(i.menu_modo)
+    menus                                    0x000010c9   Thumb Code   368  main.o(i.menus)
+    pausar                                   0x0000124d   Thumb Code    36  main.o(i.pausar)
+    prender_led                              0x00001275   Thumb Code    84  main.o(i.prender_led)
+    rxcar_uart0                              0x000012d1   Thumb Code    18  biblioteca_teclado.o(i.rxcar_uart0)
+    score                                    0x000012e9   Thumb Code    72  main.o(i.score)
+    text                                     0x00001331   Thumb Code  1564  nokia5110.o(i.text)
+    inicio                                   0x00002674   Data         504  nokia5110.o(.constdata)
+    modo_de_juego_2                          0x0000286c   Data         504  nokia5110.o(.constdata)
+    modo_de_juego_1                          0x00002a64   Data         504  nokia5110.o(.constdata)
+    control_1                                0x00002c5c   Data         504  nokia5110.o(.constdata)
+    control_2                                0x00002e54   Data         504  nokia5110.o(.constdata)
+    dificultad_facil                         0x0000304c   Data         504  nokia5110.o(.constdata)
+    dificultad_medio                         0x00003244   Data         504  nokia5110.o(.constdata)
+    dificultad_avanzado                      0x0000343c   Data         504  nokia5110.o(.constdata)
+    ball                                     0x00003634   Data         504  nokia5110.o(.constdata)
+    ganaste_cpu                              0x0000382c   Data         504  nokia5110.o(.constdata)
+    gana_j1                                  0x00003a24   Data         504  nokia5110.o(.constdata)
+    gana_j2                                  0x00003c1c   Data         504  nokia5110.o(.constdata)
+    perdiste_cpu                             0x00003e14   Data         504  nokia5110.o(.constdata)
+    Region$$Table$$Base                      0x0000400c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000402c   Number         0  anon$$obj.o(Region$$Table)
+    contador_general                         0x20000000   Data           2  main.o(.data)
+    contador_bola_barra2                     0x20000002   Data           2  main.o(.data)
+    contador_barra1                          0x20000004   Data           2  main.o(.data)
+    modo                                     0x20000006   Data           1  main.o(.data)
+    control                                  0x20000007   Data           1  main.o(.data)
+    dificultad                               0x20000008   Data           1  main.o(.data)
+    opc                                      0x20000009   Data           1  main.o(.data)
+    velocidad_bola_barra2                    0x2000000a   Data           1  main.o(.data)
+    velocidad_barra1                         0x2000000b   Data           1  main.o(.data)
+    ball_x1                                  0x2000000c   Data           1  main.o(.data)
+    ball_y1                                  0x2000000d   Data           1  main.o(.data)
+    ball_x2                                  0x2000000e   Data           1  main.o(.data)
+    ball_y2                                  0x2000000f   Data           1  main.o(.data)
+    barra1_x1                                0x20000010   Data           1  main.o(.data)
+    barra1_x2                                0x20000011   Data           1  main.o(.data)
+    barra1_y1                                0x20000012   Data           1  main.o(.data)
+    barra1_y2                                0x20000013   Data           1  main.o(.data)
+    barra2_x1                                0x20000014   Data           1  main.o(.data)
+    barra2_x2                                0x20000015   Data           1  main.o(.data)
+    barra2_y1                                0x20000016   Data           1  main.o(.data)
+    barra2_y2                                0x20000017   Data           1  main.o(.data)
+    Screen                                   0x20000018   Data         504  nokia5110.o(.bss)
+    __initial_sp                             0x20000610   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00004044, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0000402c, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000284   Code   RO          120  * RESET               startup.o
+    0x00000284   0x00000000   Code   RO          612  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000284   0x00000004   Code   RO          633    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000288   0x00000004   Code   RO          636    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0000028c   0x00000000   Code   RO          638    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0000028c   0x00000000   Code   RO          640    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0000028c   0x00000008   Code   RO          641    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000294   0x00000000   Code   RO          643    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000294   0x00000000   Code   RO          645    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000294   0x00000004   Code   RO          634    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000298   0x0000000e   Code   RO          615    .text               mc_w.l(strlen.o)
+    0x000002a6   0x00000002   PAD
+    0x000002a8   0x00000024   Code   RO          658    .text               mc_w.l(init.o)
+    0x000002cc   0x0000003a   Code   RO            1    i.ConfiguraTimer_1ms  main.o
+    0x00000306   0x00000002   PAD
+    0x00000308   0x000000b0   Code   RO            2    i.Movimiento_IA     main.o
+    0x000003b8   0x00000060   Code   RO            3    i.Movimiento_J1     main.o
+    0x00000418   0x000000b8   Code   RO            4    i.Movimiento_J2     main.o
+    0x000004d0   0x00000020   Code   RO          128    i.Nokia5110_Clear   nokia5110.o
+    0x000004f0   0x00000022   Code   RO          131    i.Nokia5110_DrawFullImage  nokia5110.o
+    0x00000512   0x00000002   PAD
+    0x00000514   0x0000016c   Code   RO          132    i.Nokia5110_Init    nokia5110.o
+    0x00000680   0x00000030   Code   RO          138    i.Nokia5110_SetCursor  nokia5110.o
+    0x000006b0   0x0000000e   Code   RO          662    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000006be   0x00000002   Code   RO          663    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000006c0   0x0000000e   Code   RO          664    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000006ce   0x00000002   PAD
+    0x000006d0   0x00000038   Code   RO            5    i.actualizarContador  main.o
+    0x00000708   0x00000018   Code   RO          143    i.clearBuffer       nokia5110.o
+    0x00000720   0x0000003c   Code   RO          150    i.clearFilledRectangle  nokia5110.o
+    0x0000075c   0x00000060   Code   RO          152    i.clearHLine        nokia5110.o
+    0x000007bc   0x00000164   Code   RO          594    i.config_pulsadores  biblioteca_pulsadores.o
+    0x00000920   0x000000bc   Code   RO          576    i.config_uart0      biblioteca_teclado.o
+    0x000009dc   0x0000001e   Code   RO            6    i.conmutar_leds     main.o
+    0x000009fa   0x00000002   PAD
+    0x000009fc   0x00000020   Code   RO          160    i.copyToScreen      nokia5110.o
+    0x00000a1c   0x0000003c   Code   RO          169    i.drawFilledRectangle  nokia5110.o
+    0x00000a58   0x00000060   Code   RO          171    i.drawHLine         nokia5110.o
+    0x00000ab8   0x0000007c   Code   RO            7    i.evaluar_colision_x  main.o
+    0x00000b34   0x00000020   Code   RO            8    i.evaluar_colision_y  main.o
+    0x00000b54   0x0000007c   Code   RO          595    i.evaluar_pulsadores_menu  biblioteca_pulsadores.o
+    0x00000bd0   0x000000ac   Code   RO            9    i.fin_partida       main.o
+    0x00000c7c   0x00000010   Code   RO          183    i.gana_cpu          nokia5110.o
+    0x00000c8c   0x00000010   Code   RO          184    i.gana_jugador      nokia5110.o
+    0x00000c9c   0x00000010   Code   RO          185    i.ganador_j1        nokia5110.o
+    0x00000cac   0x00000010   Code   RO          186    i.ganador_j2        nokia5110.o
+    0x00000cbc   0x000000f0   Code   RO           10    i.inicio_de_juego   main.o
+    0x00000dac   0x0000004c   Code   RO          188    i.lcdwrite          nokia5110.o
+    0x00000df8   0x00000250   Code   RO           11    i.main              main.o
+    0x00001048   0x00000020   Code   RO          189    i.menu_control      nokia5110.o
+    0x00001068   0x00000030   Code   RO          190    i.menu_dificultad   nokia5110.o
+    0x00001098   0x00000010   Code   RO          191    i.menu_inicio       nokia5110.o
+    0x000010a8   0x00000020   Code   RO          192    i.menu_modo         nokia5110.o
+    0x000010c8   0x00000184   Code   RO           12    i.menus             main.o
+    0x0000124c   0x00000028   Code   RO           13    i.pausar            main.o
+    0x00001274   0x0000005c   Code   RO           14    i.prender_led       main.o
+    0x000012d0   0x00000018   Code   RO          577    i.rxcar_uart0       biblioteca_teclado.o
+    0x000012e8   0x00000048   Code   RO           15    i.score             main.o
+    0x00001330   0x00000624   Code   RO          197    i.text              nokia5110.o
+    0x00001954   0x000026b8   Data   RO          199    .constdata          nokia5110.o
+    0x0000400c   0x00000020   Data   RO          660    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000018, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000018   Data   RW           17    .data               main.o
+
+
+    Execution Region ER_ZI (Base: 0x20000018, Size: 0x000005f8, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000018   0x000001f8   Zero   RW          198    .bss                nokia5110.o
+    0x20000210   0x00000400   Zero   RW          118    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       480         50          0          0          0        974   biblioteca_pulsadores.o
+       212         36          0          0          0        805   biblioteca_teclado.o
+      2352        280          0         24          0      12625   main.o
+      2686        166       9912          0        504      12940   nokia5110.o
+       644        620          0          0       1024        676   startup.o
+
+    ----------------------------------------------------------------------
+      6380       1152       9944         24       1528      28020   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        14          0          0          0          0         68   strlen.o
+
+    ----------------------------------------------------------------------
+       104         16          0          0          0        136   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       100         16          0          0          0        136   mc_w.l
+
+    ----------------------------------------------------------------------
+       104         16          0          0          0        136   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6484       1168       9944         24       1528      26284   Grand Totals
+      6484       1168       9944         24       1528      26284   ELF Image Totals
+      6484       1168       9944         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                16428 (  16.04kB)
+    Total RW  Size (RW Data + ZI Data)              1552 (   1.52kB)
+    Total ROM Size (Code + RO Data + RW Data)      16452 (  16.07kB)
+
+==============================================================================
+
